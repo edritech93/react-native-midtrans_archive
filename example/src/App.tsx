@@ -1,18 +1,43 @@
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import Midtrans from 'react-native-midtrans';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
   React.useEffect(() => {
-    Midtrans.multiply(3, 7).then(setResult);
+    console.log(
+      'Midtrans.getConstants()',
+      Midtrans.getConstants()
+    );
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        onPress={() => {
+          Midtrans.checkout({
+            order_id: Math.random().toString(),
+            client_key: '',
+            merchant_base_url: '',
+            items: [
+              {
+                id: Math.random().toString(),
+                price: 100000,
+                quantity: 2,
+                name: 'Items',
+              },
+            ],
+          })
+            .then((result) => {
+              console.log('result', result);
+            })
+            .catch((err) => {
+              console.log('err', err);
+            });
+        }}
+        title={'test'}
+      >
+        test checkout
+      </Button>
     </View>
   );
 }
@@ -22,10 +47,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });
