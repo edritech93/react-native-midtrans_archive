@@ -19,6 +19,12 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
+  - MidtransCoreKit (1.19.1)
+  - MidtransKit (1.19.1):
+    - MidtransCoreKit (= 1.19.1)
+    - MidtransKit/UI (= 1.19.1)
+  - MidtransKit/UI (1.19.1):
+    - MidtransCoreKit (= 1.19.1)
   - RCTRequired (0.63.4)
   - RCTTypeSafety (0.63.4):
     - FBLazyVector (= 0.63.4)
@@ -255,6 +261,8 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - MidtransCoreKit
+  - MidtransKit
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -283,6 +291,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - boost-for-react-native
+    - MidtransCoreKit
+    - MidtransKit
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -347,6 +357,8 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: f2c97f2529dd79c083355182cc158c9f98f4bd6e
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
+  MidtransCoreKit: ceed2def3b78bf35dfce080c62666e1f46234580
+  MidtransKit: 6541c9ae23baca15cc1fe1797f5a8321ffc3abe4
   RCTRequired: 082f10cd3f905d6c124597fd1c14f6f2655ff65e
   RCTTypeSafety: 8c9c544ecbf20337d069e4ae7fd9a377aadf504b
   React: b0a957a2c44da4113b0c4c9853d8387f8e64e615
@@ -370,6 +382,6 @@ SPEC CHECKSUMS:
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
 
-PODFILE CHECKSUM: 9edff9ec052bf4e0eb4e1c1e6d686157153b88c0
+PODFILE CHECKSUM: b201327ea7bee3328f39d892b35a2f337507f30b
 
 COCOAPODS: 1.10.1

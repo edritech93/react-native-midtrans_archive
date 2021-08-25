@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* Midtrans.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* Midtrans.m */; };
-		F4FF95D7245B92E800C19C63 /*  Midtrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  Midtrans.swift */; };
-
+		617BDE9ACC8A4F8BB6E03AEC /* Pods_Midtrans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F35AE78314DE093C89058D /* Pods_Midtrans.framework */; };
+		F4FF95D7245B92E800C19C63 /* Midtrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Midtrans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +25,12 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libMidtrans.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMidtrans.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
+		87F35AE78314DE093C89058D /* Pods_Midtrans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Midtrans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* Midtrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Midtrans.m; sourceTree = "<group>"; };
+		B48AB2F489E0B9B018F52B4B /* Pods-Midtrans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Midtrans.debug.xcconfig"; path = "Target Support Files/Pods-Midtrans/Pods-Midtrans.debug.xcconfig"; sourceTree = "<group>"; };
+		D6A1F937DEA3B14B3E2D0CC2 /* Pods-Midtrans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Midtrans.release.xcconfig"; path = "Target Support Files/Pods-Midtrans/Pods-Midtrans.release.xcconfig"; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* Midtrans-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Midtrans-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* Midtrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Midtrans.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617BDE9ACC8A4F8BB6E03AEC /* Pods_Midtrans.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,16 +53,34 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		48A27AA6B06A32644B963132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87F35AE78314DE093C89058D /* Pods_Midtrans.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
 				F4FF95D6245B92E800C19C63 /* Midtrans.swift */,
 				B3E7B5891CC2AC0600A0062D /* Midtrans.m */,
 				F4FF95D5245B92E700C19C63 /* Midtrans-Bridging-Header.h */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
+				6B60A5F01E9FC613D7A61586 /* Pods */,
+				48A27AA6B06A32644B963132 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		6B60A5F01E9FC613D7A61586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B48AB2F489E0B9B018F52B4B /* Pods-Midtrans.debug.xcconfig */,
+				D6A1F937DEA3B14B3E2D0CC2 /* Pods-Midtrans.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +90,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "Midtrans" */;
 			buildPhases = (
+				8FADD70F8B8B567D925B6EAF /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -117,15 +136,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8FADD70F8B8B567D925B6EAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Midtrans-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				F4FF95D7245B92E800C19C63 /* Midtrans.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* Midtrans.m in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +268,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B48AB2F489E0B9B018F52B4B /* Pods-Midtrans.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -238,16 +280,15 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Midtrans;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "Midtrans-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A1F937DEA3B14B3E2D0CC2 /* Pods-Midtrans.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -259,10 +300,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Midtrans;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "Midtrans-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};
